@@ -12,6 +12,7 @@ namespace Hospital_Management
 
         public JanitorialStaff(string name, string employeeID, string contact, DateTime birthDate, DateTime timeIn, DateTime timeOut) : base(name, employeeID, contact, birthDate,timeIn,timeOut)
         {
+            RoomCount = 0;  
         }
     }
 }
