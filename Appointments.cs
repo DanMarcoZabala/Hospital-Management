@@ -14,6 +14,9 @@ namespace Hospital_Management
 
         public Appointments(Patient patient,Doctor doctor, DateTime appointedDateTime) 
         {
+            this.Patient = patient; 
+            this.Doctor = doctor;   
+            this.AppointedDateTime = appointedDateTime;
         }
     }
 }
