@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hospital_Management
 {
-    internal class JanitorialStaff : Personnel
+    public class JanitorialStaff : Personnel
     {
         public int RoomCount { get; set; }
 

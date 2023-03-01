@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hospital_Management
 {
-    internal class Doctor : Personnel
+    public class Doctor : Personnel
     {
         public string DoctorId { get; private set; }
         

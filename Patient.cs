@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hospital_Management
 {
-    internal class Patient
+    public class Patient
     {
         public string Name { get; set; }
         public DateTime AdmissionDuration { get; set; }

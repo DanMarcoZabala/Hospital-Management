@@ -10,13 +10,13 @@ namespace Hospital_Management
     {
         private List<Patient> patients;
         private List<Doctor> doctors;
-        private List<Appointment> appointments;
+        private List<Appointments> appointments;
 
         public Hospital()
         {
             patients = new List<Patient>();
             doctors = new List<Doctor>();
-            appointments = new List<Appointment>();
+            appointments = new List<Appointments>();
         }
 
         public void AddPatient(Patient patient)
@@ -26,18 +26,18 @@ namespace Hospital_Management
 
         public void AddDoctor(Doctor doctor)
         {
-            doctors.Add(doctor);
+            this.doctors.Add(doctor);
         }
 
-        public void ScheduleAppointment(Appointment appointment)
+        public void ScheduleAppointment(Appointments appointment)
         {
             appointments.Add(appointment);
         }
 
-        public List<Appointment> GetAppointmentsForDoctor(string doctorName)
+        public List<Appointments> GetAppointmentsForDoctor(string doctorName)
         {
-            List<Appointment> doctorAppointments = new List<Appointment>();
-            foreach (Appointment appointment in appointments)
+            List<Appointments> doctorAppointments = new List<Appointments>();
+            foreach (Appointments appointment in appointments)
             {
                 if (appointment.Doctor.Name == doctorName)
                 {
@@ -47,10 +47,10 @@ namespace Hospital_Management
             return doctorAppointments;
         }
 
-        public List<Appointment> GetAppointmentsForPatient(string patientName)
+        public List<Appointments> GetAppointmentsForPatient(string patientName)
         {
-            List<Appointment> patientAppointments = new List<Appointment>();
-            foreach (Appointment appointment in appointments)
+            List<Appointments> patientAppointments = new List<Appointments>();
+            foreach (Appointments appointment in appointments)
             {
                 if (appointment.Patient.Name == patientName)
                 {
