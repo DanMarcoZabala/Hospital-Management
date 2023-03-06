@@ -12,7 +12,7 @@ namespace Hospital_Management
     {
         public string Name { get; private set; }
         public string EmployeeID { get; private set; }
-        public string Contact { get; set; }
+        public string Contact { get; private set; }
         public DateTime BirthDate { get; private set; } 
         public DateTime TimeIn { get; private set; }
         public DateTime TimeOut { get; private set; }

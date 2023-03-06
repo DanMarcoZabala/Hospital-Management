@@ -11,17 +11,25 @@ namespace Hospital_Management
         private List<Patient> patients;
         private List<Doctor> doctors;
         private List<Appointments> appointments;
+        public int MaxCapacity { get; private set; }
+        public int CurrentPassengerCount { get; private set; }
 
-        public Hospital()
+        public Hospital(int maxCapacity, int currentPassengerCount)
         {
             patients = new List<Patient>();
             doctors = new List<Doctor>();
             appointments = new List<Appointments>();
+            this.MaxCapacity = maxCapacity;
+            this.CurrentPassengerCount = currentPassengerCount;
         }
 
         public void AddPatient(Patient patient)
         {
-            patients.Add(patient);
+            if (CurrentPassengerCount == 0 || CurrentPassengerCount != MaxCapacity)
+            {
+                patients.Add(patient);
+            }
+            
         }
 
         public void AddDoctor(Doctor doctor)
