@@ -25,7 +25,7 @@ namespace Hospital_Management
 
         public void AddPatient(Patient patient)
         {
-            if (CurrentPassengerCount == 0 || CurrentPassengerCount != MaxCapacity)
+            if (CurrentPassengerCount == 0 || CurrentPassengerCount < MaxCapacity)
             {
                 patients.Add(patient);
             }
